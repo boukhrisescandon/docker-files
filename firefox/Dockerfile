@@ -3,7 +3,7 @@ FROM ubuntu:17.04
 RUN apt-get update && apt-get install -y firefox
 
 # Replace 1000 with your user / group id
-RUN export uid=1000 gid=1000 && \
+RUN export uid=501 gid=20 && \
     mkdir -p /home/developer && \
     mkdir -p /etc/sudoers.d && \
     echo "developer:x:${uid}:${gid}:Developer,,,:/home/developer:/bin/bash" >> /etc/passwd && \
